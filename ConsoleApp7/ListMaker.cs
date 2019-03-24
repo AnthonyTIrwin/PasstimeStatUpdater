@@ -1,10 +1,6 @@
 ﻿using CsvHelper;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PlayerManager
 {
@@ -13,12 +9,11 @@ namespace PlayerManager
 
         public List<RosterData> ListRoster { get; set; }
 
-
-        static void GenList()
+        public void GenList()
         {
 
             List<RosterData> listRoster = new List<RosterData>();
-            using (TextReader reader = File.OpenText($"../../mlb_players.csv"))
+            using (TextReader reader = File.OpenText(path: $"../../mlb_players.csv"))
             {
                 CsvReader csv = new CsvReader(reader);
                 csv.Configuration.Delimiter = ",";
@@ -29,15 +24,15 @@ namespace PlayerManager
 
 
                     RosterData Record = csv.GetRecord<RosterData>();
+              
                     listRoster.Add(Record);
 
-                    var ListRoster = listRoster;
 
 
 
 
                 }
-
+                ListRoster = listRoster;
             }
 
         }

@@ -13,39 +13,20 @@ namespace PlayerManager
         static void Main(string[] args)
         {
 
-            List<RosterData> ListRoster = new List<RosterData>();
-            using (TextReader reader = File.OpenText($"../../mlb_players.csv"))
-            {
-                CsvReader csv = new CsvReader(reader);
-                csv.Configuration.Delimiter = ",";
-                csv.Configuration.MissingFieldFound = null;
-                while (csv.Read())
-
-                {
-
-                    // does this go into a {get;set;} property?  
-                    RosterData Record = csv.GetRecord<RosterData>();
-                    ListRoster.Add(Record);
+            //calls on ListMaker to read .cvs file and makes it into a list
+            ListMaker FirstList = new ListMaker();
+            FirstList.GenList();
+            List<RosterData> ListRoster = FirstList.ListRoster;
 
 
 
-                }                
+            //Call UI Class to get names of members on team
 
-            }
+            UIClass OnTeam = new UIClass();
+            OnTeam.TeamRoster();
 
 
-            Console.WriteLine("Please enter team name using initials from following list.");
-            Console.WriteLine("Baltimore Orieoles = BAL  Chicago White Sox    = CWS  California Angels = ANA");
-            Console.WriteLine("Boston Red Sox     = BOS  Cleveland Indians    = CLE  Oakland A's       = OAK");
-            Console.WriteLine("New York Yankees   = NYY  Detroit Tigers       = DET  Seattle Mainers   = SEA");
-            Console.WriteLine("Tampa Bay Rays     = TB   Kansas City Royals   = KC   Texas Rangers.........= TEX");
-            Console.WriteLine("Toronto Blue Jays  = TOR  Minnesota Twins      = MIN  Atlanta Braves........= ATL");
-            Console.WriteLine("Chicago Cubs       = CHC  Arizona Diamondbacks = ARZ  Miami Marlins         = FLA");
-            Console.WriteLine("Cincinnati Reds    = CIN  Colorado Rockies     = COL  New York Mets         = NYM");
-            Console.WriteLine("H" +
-                "oustan Astros     = HOU  LA Dodgers           = LA   Philidephia Phillies  = PHI");
-            Console.WriteLine("Millawakee Brewers = MLW  San Diego Padres     = SD   Washington Nationals  = WAS");
-            Console.WriteLine("Pittsburg Pirates  = PIT  San Francisco Giants = SF   Saint Louis Cardinals = STL");
+
 
 
             Console.WriteLine("Please input name of MLB Player:");

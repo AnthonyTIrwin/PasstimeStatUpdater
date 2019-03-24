@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace PlayerManager
 {
-    class RosterData
+    public class RosterData
     {
 
-        public String Name { get; set; }
-        public String Popcorn { get; set; }
-        public String Position { get; set; }
-        public String Height { get; set; }
-        public String Weight { get; set; }
-        public String Age { get; set; }
+        public string Name { get; set; }
+        public string Popcorn { get; set; }
+        public string Position { get; set; }
+        public string Height { get; set; }
+        public string Weight { get; set; }
+        public string Age { get; set; }
 
     }
 }
