@@ -10,8 +10,9 @@ namespace PlayerManager
     class UIClass
     {
 
+        public List<RosterData> CvsList { get; set; }
 
-
+        //displays initials key for list
         public void TeamRoster()
         {
 
@@ -35,9 +36,6 @@ namespace PlayerManager
         }
 
         //Method for getting list of players from specific team
-
-
-
         public void TmSearch()
         {
             //makes new list object of .csv file
@@ -45,38 +43,41 @@ namespace PlayerManager
             listMaker.GenList();
             List<RosterData> TeamList = listMaker.ListRoster;
 
-            Console.WriteLine("put in team initials:");
-                
-               Console.ReadLine();
-            //string xyz = Console.ReadLine();
-
-            //int index = TeamList.FindIndex(x => x.Popcorn.Contains(xyz));
-
-            //Console.WriteLine("This is {0}", TeamList[index].Name);
-          
+            Console.WriteLine("put in team initials:");    
+            string xyz = Console.ReadLine();
             foreach (var item in TeamList)
             {
-                
-                
 
-                    Console.WriteLine(item.Popcorn);
+                if ( xyz.ToLower() == item.Popcorn.ToLower())
+                {
 
-                
-              
+                    item.PrintName();
 
+                }
 
             }
 
+            
+            //string xyz = Console.ReadLine();
+            //int index = TeamList.FindIndex(x => x.Popcorn.Contains(xyz));
+            //Console.WriteLine("This is {0}", TeamList[index].Name);
+
+            CvsList = TeamList;
+
+           
 
 
 
         }
 
 
-        public void xyz()
+        //generates profile for specified player
+        public void PlayerProfile()
         {
 
-            
+           
+
+            Console.WriteLine(CvsList[30].Popcorn);
 
 
 

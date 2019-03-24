@@ -9,6 +9,9 @@ namespace PlayerManager
 
         public List<RosterData> ListRoster { get; set; }
 
+
+
+
         public void GenList()
         {
             //uses Csvhelper to convert .csv to the LisRoster list
