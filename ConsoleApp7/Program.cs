@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CsvHelper;
 
-namespace ConsoleApp7
+namespace PlayerManager
 {
     class Program
     {
@@ -42,7 +42,8 @@ namespace ConsoleApp7
             Console.WriteLine("Toronto Blue Jays  = TOR  Minnesota Twins      = MIN  Atlanta Braves........= ATL");
             Console.WriteLine("Chicago Cubs       = CHC  Arizona Diamondbacks = ARZ  Miami Marlins         = FLA");
             Console.WriteLine("Cincinnati Reds    = CIN  Colorado Rockies     = COL  New York Mets         = NYM");
-            Console.WriteLine("Houstan Astros     = HOU  LA Dodgers           = LA   Philidephia Phillies  = PHI");
+            Console.WriteLine("H" +
+                "oustan Astros     = HOU  LA Dodgers           = LA   Philidephia Phillies  = PHI");
             Console.WriteLine("Millawakee Brewers = MLW  San Diego Padres     = SD   Washington Nationals  = WAS");
             Console.WriteLine("Pittsburg Pirates  = PIT  San Francisco Giants = SF   Saint Louis Cardinals = STL");
 

@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace PlayerManager
 {
-    public class Class3
+    class ListMaker
     {
 
+        public List<RosterData> ListRoster { get; set; }
 
 
-        List<RosterData> ListRoster = new List<RosterData>();
-
-        public void Charlie()
+        static void GenList()
         {
 
-            using (TextReader reader = File.OpenText(@"C:\\temp\mlb_players.csv"))
+            List<RosterData> listRoster = new List<RosterData>();
+            using (TextReader reader = File.OpenText($"../../mlb_players.csv"))
             {
                 CsvReader csv = new CsvReader(reader);
                 csv.Configuration.Delimiter = ",";
@@ -27,15 +27,19 @@ namespace PlayerManager
 
                 {
 
-                    // does this go into a {get;set;} property?  
+
                     RosterData Record = csv.GetRecord<RosterData>();
-                    ListRoster.Add(Record);
+                    listRoster.Add(Record);
+
+                    var ListRoster = listRoster;
+
 
 
 
                 }
 
             }
+
         }
     }
 }
