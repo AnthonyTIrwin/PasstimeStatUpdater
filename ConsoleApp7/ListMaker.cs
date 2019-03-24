@@ -11,7 +11,7 @@ namespace PlayerManager
 
         public void GenList()
         {
-
+            //uses Csvhelper to convert .csv to the LisRoster list
             List<RosterData> listRoster = new List<RosterData>();
             using (TextReader reader = File.OpenText(path: $"../../mlb_players.csv"))
             {
@@ -21,15 +21,9 @@ namespace PlayerManager
                 while (csv.Read())
 
                 {
-
-
                     RosterData Record = csv.GetRecord<RosterData>();
               
                     listRoster.Add(Record);
-
-
-
-
 
                 }
                 ListRoster = listRoster;

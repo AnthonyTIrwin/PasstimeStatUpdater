@@ -24,6 +24,7 @@ namespace PlayerManager
 
             UIClass OnTeam = new UIClass();
             OnTeam.TeamRoster();
+            OnTeam.TmSearch();
 
 
 
