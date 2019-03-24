@@ -63,7 +63,7 @@ Mike MacDougal,CWS,Relief Pitcher,76,195,29.99
 David Aardsma,CWS,Relief Pitcher,77,200,25.17
 Andrew Sisco,CWS,Relief Pitcher,81,260,24.13
 Matt Thornton,CWS,Relief Pitcher,78,228,30.46
-Bobby Jenks,BAL,Relief Pitcher,75,270,25.96
+Bobby Jenks,CWS,Relief Pitcher,75,270,25.96
 Boone Logan,CWS,Relief Pitcher,77,200,22.55
 Sean Tracey,CWS,Relief Pitcher,75,210,26.29
 Nick Masset,BOS,Relief Pitcher,76,190,24.79
@@ -583,7 +583,7 @@ Doug Slaten,ARZ,Relief Pitcher,77,200,27.07
 Edgar Gonzalez,ARZ,Relief Pitcher,72,215,24.02
 Jose Valverde,ARZ,Relief Pitcher,76,254,27.6
 Jorge Julio,ARZ,Relief Pitcher,73,232,27.99
-Brandon Lyon,ARZ,Relief Pitcher,73,180,27.56
+Brandon Lyon,CWS,Relief Pitcher,73,180,27.56
 Miguel Olivo,FLA,Catcher,72,215,28.63
 Matt Treanor,FLA,Catcher,74,220,30.99
 Mike Jacobs,FLA,First Baseman,74,180,26.33
@@ -892,7 +892,7 @@ Heath Bell,SD,Relief Pitcher,74,244,29.42
 Royce Ring,SD,Relief Pitcher,72,220,26.19
 Cla Meredith,SD,Relief Pitcher,73,185,23.74
 Andrew Brown,SD,Relief Pitcher,78,230,26.03
-Mike Adams,SD,Relief Pitcher,77,190,28.59
+Mike Adams,BAL,Relief Pitcher,77,190,28.59
 Justin Hampson,SD,Relief Pitcher,73,200,26.77
 Kevin Cameron,SD,Relief Pitcher,73,180,27.21
 Ryan Ketchner,SD,Relief Pitcher,73,190,24.87

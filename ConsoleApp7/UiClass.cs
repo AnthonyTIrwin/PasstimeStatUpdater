@@ -9,14 +9,11 @@ namespace PlayerManager
 {
     class UIClass
     {
-
         public List<RosterData> CvsList { get; set; }
-
+        public string ABC { get; set; }
         //displays initials key for list
         public void TeamRoster()
         {
-
-
             Console.WriteLine("Please enter team name using initials from following list.");
             Console.WriteLine("=================================================================================");
             Console.WriteLine("Baltimore Orieoles = BAL  Chicago White Sox    = CWS  California Angels     = ANA");
@@ -30,62 +27,69 @@ namespace PlayerManager
             Console.WriteLine("Millawakee Brewers = MLW  San Diego Padres     = SD   Washington Nationals  = WAS");
             Console.WriteLine("Pittsburg Pirates  = PIT  San Francisco Giants = SF   Saint Louis Cardinals = STL");
             Console.WriteLine("---------------------------------------------------------------------------------");
-
-
-
         }
-
         //Method for getting list of players from specific team
         public void TmSearch()
         {
-            //makes new list object of .csv file
             ListMaker listMaker = new ListMaker();
             listMaker.GenList();
             List<RosterData> TeamList = listMaker.ListRoster;
-
-            Console.WriteLine("put in team initials:");    
+            Console.WriteLine("Enter Team Initials Here:");
             string xyz = Console.ReadLine();
+            Console.WriteLine("__________________________");
             foreach (var item in TeamList)
             {
-
                 if ( xyz.ToLower() == item.Popcorn.ToLower())
                 {
+                    item.PrintName();                   
+                }
+            }
+           CvsList = TeamList;
+        }
+        //Pull up all the data on a specific player
+        public void PlayerData()
+        {
+            Console.WriteLine("_________________________");
+            Console.WriteLine("Please Input Player Name:");
+            string abc = Console.ReadLine();
+            foreach (var thing in CvsList)
+            {
+                if (abc == thing.Name)
+                {
+                    thing.Print();
+                }
+            }
+            ABC = abc;
+        }
+        //Change Data for specific player
+        public void PlayerChanger()
+        {
+            Console.WriteLine("______________________");
+            Console.WriteLine("What's the new team?");
+            var NewTeam = Console.ReadLine();
+            int index = CvsList.FindIndex(x => x.Name.Contains(ABC));
 
-                    item.PrintName();
+            CvsList[index].Popcorn = NewTeam;          
 
+        }
+
+        public void UpdatedList()
+        {
+
+            foreach (var part in CvsList)
+            {
+
+                if (ABC == part.Name)
+                {
+                    part.Print();
                 }
 
             }
 
-            
-            //string xyz = Console.ReadLine();
-            //int index = TeamList.FindIndex(x => x.Popcorn.Contains(xyz));
-            //Console.WriteLine("This is {0}", TeamList[index].Name);
-
-            CvsList = TeamList;
-
-           
 
 
 
         }
-
-
-        //generates profile for specified player
-        public void PlayerProfile()
-        {
-
-           
-
-            Console.WriteLine(CvsList[30].Popcorn);
-
-
-
-        }
-
-
-
-
     }
 }
 
