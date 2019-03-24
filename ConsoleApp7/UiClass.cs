@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsvHelper;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace PlayerManager
         //displays initials key for list
         public void TeamRoster()
         {
-            Console.WriteLine("Please enter team name using initials from following list.");
+            Console.WriteLine("           Please enter team name using initials from following list.");
             Console.WriteLine("=================================================================================");
             Console.WriteLine("Baltimore Orieoles = BAL  Chicago White Sox    = CWS  California Angels     = ANA");
             Console.WriteLine("Boston Red Sox     = BOS  Cleveland Indians    = CLE  Oakland A's           = OAK");
@@ -68,27 +69,26 @@ namespace PlayerManager
             Console.WriteLine("What's the new team?");
             var NewTeam = Console.ReadLine();
             int index = CvsList.FindIndex(x => x.Name.Contains(ABC));
-
             CvsList[index].Popcorn = NewTeam;          
-
         }
-
         public void UpdatedList()
         {
-
             foreach (var part in CvsList)
             {
-
                 if (ABC == part.Name)
                 {
                     part.Print();
                 }
-
             }
-
-
-
-
+        }
+        public void SaveIt()
+        {
+            Console.WriteLine("Press enter to save it to file");
+            using (var writer = new StreamWriter($"../../mlb_players.csv"))
+            using (var csv = new CsvWriter(writer))
+            {
+                  csv.WriteRecords(CvsList);
+            }
         }
     }
 }

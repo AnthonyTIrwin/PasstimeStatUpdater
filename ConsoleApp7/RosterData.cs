@@ -18,6 +18,7 @@ namespace PlayerManager
         public void Print ()
         {
             Console.WriteLine("_______________________");
+            Console.WriteLine("");
             Console.WriteLine("Player:   {0}", Name);
             Console.WriteLine("Team:     {0}", Popcorn);
             Console.WriteLine("Position: {0}", Position);
