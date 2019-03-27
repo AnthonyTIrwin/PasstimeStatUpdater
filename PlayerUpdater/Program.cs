@@ -20,6 +20,7 @@ namespace PlayerManager
             OnTeam.UpdatedList();
             //saves updated list to .csv file
             OnTeam.SaveIt();
+
             Console.ReadLine();         
         }
     }

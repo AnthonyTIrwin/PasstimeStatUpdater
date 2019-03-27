@@ -65,7 +65,6 @@ namespace PlayerManager
             Console.WriteLine("_________________________");
             Console.WriteLine("What's {0}'s new team?", ABC);
             var NewTeam = Console.ReadLine();
-            Console.ReadLine();
             int index = CvsList.FindIndex(x => x.Name.Contains(ABC));
             CvsList[index].Popcorn = NewTeam;
         }
