@@ -62,12 +62,14 @@ namespace PlayerManager
         //Change Data for specific player
         public void PlayerChanger()
         {
-            Console.WriteLine("______________________");
-            Console.WriteLine("What's the new team?");
+            Console.WriteLine("_________________________");
+            Console.WriteLine("What's {0}'s new team?", ABC);
             var NewTeam = Console.ReadLine();
+            Console.ReadLine();
             int index = CvsList.FindIndex(x => x.Name.Contains(ABC));
-            CvsList[index].Popcorn = NewTeam;          
+            CvsList[index].Popcorn = NewTeam;
         }
+        //displays updated player profile
         public void UpdatedList()
         {
             foreach (var part in CvsList)
@@ -81,6 +83,7 @@ namespace PlayerManager
         public void SaveIt()
         {
             Console.WriteLine("Press enter to save it to file");
+            Console.ReadLine();
             using (var writer = new StreamWriter($"../../mlb_players.csv"))
             using (var csv = new CsvWriter(writer))
             {

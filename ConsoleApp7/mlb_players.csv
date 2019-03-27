@@ -64,8 +64,8 @@ David Aardsma,CWS,Relief Pitcher,77,200,25.17
 Andrew Sisco,CWS,Relief Pitcher,81,260,24.13
 Matt Thornton,CWS,Relief Pitcher,78,228,30.46
 Bobby Jenks,BAL,Relief Pitcher,75,270,25.96
-Boone Logan,CWS,Relief Pitcher,77,200,22.55
-Sean Tracey,CWS,Relief Pitcher,75,210,26.29
+Boone Logan,BAL,Relief Pitcher,77,200,22.55
+Sean Tracey,BAL,Relief Pitcher,75,210,26.29
 Nick Masset,BOS,Relief Pitcher,76,190,24.79
 Jose Molina,ANA,Catcher,74,220,31.74
 Jeff Mathis,ANA,Catcher,72,180,23.92
@@ -583,7 +583,7 @@ Doug Slaten,ARZ,Relief Pitcher,77,200,27.07
 Edgar Gonzalez,ARZ,Relief Pitcher,72,215,24.02
 Jose Valverde,ARZ,Relief Pitcher,76,254,27.6
 Jorge Julio,ARZ,Relief Pitcher,73,232,27.99
-Brandon Lyon,CWS,Relief Pitcher,73,180,27.56
+Brandon Lyon,Teams,Relief Pitcher,73,180,27.56
 Miguel Olivo,FLA,Catcher,72,215,28.63
 Matt Treanor,FLA,Catcher,74,220,30.99
 Mike Jacobs,FLA,First Baseman,74,180,26.33
@@ -643,7 +643,7 @@ Kirk Saarloos,CIN,Starting Pitcher,72,,27.77
 Elizardo Ramirez,CIN,Starting Pitcher,72,180,24.09
 Todd Coffey,CIN,Relief Pitcher,77,230,26.47
 Brian Shackelford,CIN,Relief Pitcher,73,195,30.5
-Bill Bray,CIN,Relief Pitcher,75,215,23.74
+Bill Bray,BOS,Relief Pitcher,75,215,23.74
 Bobby Livingston,CIN,Relief Pitcher,75,190,24.49
 Matt Belisle,CIN,Relief Pitcher,75,195,26.73
 Gary Majewski,CIN,Relief Pitcher,73,215,27.01
@@ -858,7 +858,7 @@ Jeff Suppan,MLW,Starting Pitcher,74,220,32.16
 Brian Shouse,MLW,Relief Pitcher,71,190,38.43
 Francisco Cordero,MLW,Relief Pitcher,74,235,31.81
 Derrick Turnbow,MLW,Relief Pitcher,75,210,29.1
-Matt Wise,MLW,Relief Pitcher,76,200,31.28
+Matt Wise,teams,Relief Pitcher,76,200,31.28
 Grant Balfour,MLW,Relief Pitcher,74,188,29.17
 Dennis Sarfate,MLW,Relief Pitcher,76,210,25.89
 Jose Capellan,MLW,Relief Pitcher,76,235,26.13
@@ -895,7 +895,7 @@ Andrew Brown,SD,Relief Pitcher,78,230,26.03
 Mike Adams,BAL,Relief Pitcher,77,190,28.59
 Justin Hampson,SD,Relief Pitcher,73,200,26.77
 Kevin Cameron,SD,Relief Pitcher,73,180,27.21
-Ryan Ketchner,SD,Relief Pitcher,73,190,24.87
+Ryan Ketchner,CWS,Relief Pitcher,73,190,24.87
 Brian Schneider,WAS,Catcher,73,196,30.26
 Jesus Flores,WAS,Catcher,73,180,22.34
 Larry Broadway,WAS,First Baseman,76,230,26.2
