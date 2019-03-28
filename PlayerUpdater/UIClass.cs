@@ -1,7 +1,10 @@
-﻿using CsvHelper;
+using CsvHelper;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace PlayerManager
 {
@@ -37,12 +40,12 @@ namespace PlayerManager
             Console.WriteLine("__________________________");
             foreach (var item in TeamList)
             {
-                if ( xyz.ToLower() == item.Popcorn.ToLower())
+                if (xyz.ToLower() == item.Popcorn.ToLower())
                 {
-                    item.PrintName();                   
+                    item.PrintName();
                 }
             }
-           CvsList = TeamList;
+            CvsList = TeamList;
         }
         //Pull up all the data on a specific player
         public void PlayerData()
@@ -62,31 +65,45 @@ namespace PlayerManager
         //Change Data for specific player
         public void PlayerChanger()
         {
-            Console.WriteLine("_________________________");
-            Console.WriteLine("What's {0}'s new team?", ABC);
+            Console.WriteLine("______________________");
+            Console.WriteLine("What's the new team?");
             var NewTeam = Console.ReadLine();
+
             int index = CvsList.FindIndex(x => x.Name.Contains(ABC));
             CvsList[index].Popcorn = NewTeam;
+
+            Console.WriteLine("Would you like to change player's weight? Y or N ");
+            var AskWeight = Console.ReadLine();
+            if (AskWeight.ToLower() == "y")
+            {
+                Console.WriteLine("What's {0}'s new weight?", ABC);
+                var NewWeight = Console.ReadLine();
+                CvsList[index].Weight = NewWeight;
+
+            }
+
         }
-        //displays updated player profile
+
+        //calls list again so user can verify change
         public void UpdatedList()
         {
             foreach (var part in CvsList)
             {
-                if (ABC == part.Name)
+                if (ABC.ToLower() == part.Name.ToLower())
                 {
                     part.Print();
                 }
             }
         }
+
+        //saves modified list to .csv file
         public void SaveIt()
         {
             Console.WriteLine("Press enter to save it to file");
-            Console.ReadLine();
             using (var writer = new StreamWriter($"../../mlb_players.csv"))
             using (var csv = new CsvWriter(writer))
             {
-                  csv.WriteRecords(CvsList);
+                csv.WriteRecords(CvsList);
             }
         }
     }
